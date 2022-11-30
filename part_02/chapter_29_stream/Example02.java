@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Example2 {
+public class Example02 {
     public static void main(String[] args) {
         List<Integer> numberList = List.of(7,18,10,24,17,5);
         List<Integer> myList = new ArrayList<>(numberList);
