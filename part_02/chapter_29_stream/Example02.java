@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 public class Example02 {
     public static void main(String[] args) {
         List<Integer> numberList = List.of(7,18,10,24,17,5);
@@ -14,5 +15,8 @@ public class Example02 {
 
         int product = myList.stream().reduce(1,(a,b)->a*b);
         System.out.println("Product as int "+product);
+
+        int product2 = myList.stream().reduce(0,Integer::sum);
+        System.out.println("sum using Integer sum method "+product2);
     }
 }
