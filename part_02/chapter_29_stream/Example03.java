@@ -8,9 +8,11 @@ public class Example03 {
         List<Double> numbers = List.of(7.0,18.0,10.0,24.0,17.0,5.0);
         List<Double> myList = new ArrayList<>(numbers);
 
-        double squareRootProducts = myList.parallelStream().reduce(1.0,(a,b)->a*Math.sqrt(b),(a,b)->a*b);
+        //using parallelStream
+        double squareRootProducts = myList.parallelStream().unordered().reduce(1.0,(a,b)->a*Math.sqrt(b),(a,b)->a*b);
         System.out.println(squareRootProducts);
 
+        //using parallel() method inside stream
         double squareRootProducts2 = myList.stream().parallel().reduce(1.0,(a,b)-> a*Math.sqrt(b),(a,b)->a*b);
         System.out.println(squareRootProducts2);
     }
