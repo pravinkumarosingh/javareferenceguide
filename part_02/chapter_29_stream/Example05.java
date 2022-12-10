@@ -10,18 +10,13 @@ public class Example05 {
       List<Double> myList = new ArrayList<>(numbers);
 
       System.out.print("Original Values: ");
-      myList.stream(). forEach(element -> System.out.print(element+" "));
+      myList.stream().forEach(element -> System.out.print(element+" "));
 
       System.out.println();
 
       IntStream cstrm = myList.stream().mapToInt(element -> (int) Math.ceil(element));
       System.out.print("Mapped to integer: ");
       cstrm.forEach(element -> System.out.print(element+" "));
-
-
-
-
-
 
     }
 }
